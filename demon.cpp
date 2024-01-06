@@ -95,23 +95,99 @@ int main(){
         print -> retirement time
     */
 
-    int age;
-    cout<<"Enter age : ";
-    cin>>age;
-    if(age < 18){
-        cout<<"Not eligible for job";
-    }
-    else if ( age <=54){
-        cout<<"You are eligible for job";
-        if(age >=57){
-            cout<<"eligible for job but retirement soon.";
-        }
-    }
-    else{
-        cout<<"Retirement time";
-    }
+    // int age;
+    // cout<<"Enter age : ";
+    // cin>>age;
+    // if(age < 18){
+    //     cout<<"Not eligible for job";
+    // }
+    // else if ( age <=54){
+    //     cout<<"You are eligible for job";
+    //     if(age >=57){
+    //         cout<<"eligible for job but retirement soon.";
+    //     }
+    // }
+    // else{
+    //     cout<<"Retirement time";
+    // }
+
+    // switch 
+
+    // int day;
+    // cout<<"Enter days : ";
+    // cin>>day;
+
+    // switch(day){
+    //     case 1:
+    //         cout<<"Monday";
+    //         break;
+    //     case 2:
+    //         cout<<"Tuesday";
+    //         break;
+    //     case 3:
+    //         cout<<"Wednesday";
+    //         break;
+    //     case 4:
+    //         cout<<"Thursday";
+    //         break;
+    //     case 5:
+    //         cout<<"Friday";
+    //         break;
+    //     case 6:
+    //         cout<<"Saturday";
+    //         break;
+    //     case 7:
+    //         cout<<"sunday";
+    //         break;
+    //     default :
+    //         cout<<"Invalid";
+    // }
 
 
+// arrays
+// int arr[5];
+// cout<<"enter the 4 values to stored it into am array";
+// cin>>arr[0]>>arr[1]>>arr[2]>>arr[3]>arr[4];
 
+//todo please note that if you declare a integer arry then you  want to store 7.7 like double valu then it trim it first then stored it
+
+// arrays are stord into consucutive memory location 
+
+
+// 2d array
+// int  newArr[3][5];//rows column
+
+// in 2d array if you do not store any value it's store some gurbage value into it
+
+// string
+
+// string s1 ="Rahul";
+
+// int len = s1.size();
+// cout<<s1[len-1];
+
+// you can change any position's value but remember one thing when you modify  a string dont use "" use '' because of it a character
+
+
+// for loop
+        // for(int i =1;i<=10;i++){
+        //     cout<<"Hello Rahul "<<i<<endl;
+        // }
+
+
+        // while loop
+
+        // int j=1;
+        //  while(j<=5){
+        //     cout<<"While loop"<<endl;
+        //     j++;
+        //  }
+
+        //  do-while loop always run first time while condition is false
+        int k = 2;
+        do{
+            cout<<"do while loop "<<endl;
+            k++;
+        }while(k<1);
     return 0;
 }
