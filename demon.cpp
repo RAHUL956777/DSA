@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+// int main(){
     // std::cout<<"welcome Rahul"<<"\n";
     // cout<<"welcome Rahul" << endl; //it is similar to \n
     // cout<<"welcome Rahul";
@@ -184,10 +184,66 @@ int main(){
         //  }
 
         //  do-while loop always run first time while condition is false
-        int k = 2;
-        do{
-            cout<<"do while loop "<<endl;
-            k++;
-        }while(k<1);
+        // int k = 2;
+        // do{
+        //     cout<<"do while loop "<<endl;
+        //     k++;
+        // }while(k<1);
+
+
+        // function in c++
+        /*
+        1.void function -> which doesnot return anuthing
+        2.parameterized function
+        3.non-parameterized function
+        */
+        // void printName(string name){
+        //     cout<<"Hey "<<name;
+        // }
+
+        // int addTwoNum(int num1,int num2){
+        //     int num3 = num1+num2;
+        //     return num3;
+        // }
+        // int main(){
+        // string name;
+        // cin>>name;
+        // printName(name);
+        
+
+        // take two number and print its sum
+        // int n1,n2;
+        // cout<<"Enter two number for addition : ";
+        // cin>>n1>>n2;
+        // int res = addTwoNum(n1,n2);
+        // cout<<res;
+
+
+// pass by value means it's send a compy of the valu into function but the value remain same
+// void doSomething(int number){
+//     cout<<number<<endl;
+//     number += 5;
+//     cout<<number<<endl;
+//     number += 5;
+//     cout<<number<<endl;
+// }
+//         int main(){
+//             int num = 10;
+//             doSomething(num);
+//             cout<<"After the function call ."<<endl<<num<<endl;
+//         return 0;
+// }
+
+
+// pass by reference -> it send the original value;
+void something(string &s){
+    s[0]= 't';
+    cout << s << endl;
+}
+
+int main(){
+    string s = "raj";
+    something(s);
+    cout<<s<<endl;
     return 0;
 }
