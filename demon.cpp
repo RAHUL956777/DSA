@@ -236,14 +236,46 @@ using namespace std;
 
 
 // pass by reference -> it send the original value;
-void something(string &s){
-    s[0]= 't';
-    cout << s << endl;
+// void something(string &s){
+//     s[0]= 't';
+//     cout << s << endl;
+// }
+
+// int main(){
+//     string s = "raj";
+//     something(s);
+//     cout<<s<<endl;
+//     return 0;
+// }
+
+// arrays are pass by reference
+
+// int main(){
+//     int arr[5];
+//     for(int i=0;i<=4; i = i+1){
+//         cin>> arr[i];
+//     }
+//     for(int i=0;i<=4; i = i+1){
+//         cout << arr[i] <<" ";
+//     }
+// }
+
+// arrys are by default pass by reference
+
+void doSomething(int arr[],int n){
+    arr[0] += 100;
+    cout <<"value inside function "<<arr[0]<<endl;
 }
 
 int main(){
-    string s = "raj";
-    something(s);
-    cout<<s<<endl;
+    int n=5;
+    int arr[n];
+    for (int i=0;i<n;i+=1){
+        cin >> arr[i];
+    }
+
+
+    doSomething(arr,n);
+    cout<<"Valut  inside the main: "<<arr[0]<<endl;
     return 0;
 }
