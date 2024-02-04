@@ -174,7 +174,7 @@ void print13(int n){
     }
 }
 
-vois print14(int n){
+void print14(int n){
     for(int i=0;i<n;i++){
         for(char ch = 'A';ch<='A'+(n-i+1);ch++){
             cout<<ch<<" ";
@@ -183,10 +183,64 @@ vois print14(int n){
     }
 }
 
+void print15(int n){
+    for(int i=0;i<n;i++){
+        char ch = 'A' +i;
+        for(int j=0;j<=i;j++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void print16(int n){
+    for(int i=0;i<n;i++){
+        // space
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+
+        //charachter
+        char ch = 'A';
+        int breakpoint = (2*i+1)/2;
+        for(int j=1;j<=2*i+1;j++){
+            cout<<ch;
+            if(j<=breakpoint) ch++;
+            else ch--;
+        }
+        
+
+        // space
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+void print17(int n){
+    for(int i=0;i<n;i++){
+        for(char ch='E'-i;ch<='E';ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+// void print18(int n){
+//     for(int i=0;i<n;i++){
+//         //star
+//             for(int i)
+//         //space
+
+//         //star
+//     }
+// }
+
 int main(){
         int n;
         cin>>n;
-        print13(n);
+        print17(n);
         
     return 0;
 }
