@@ -25,6 +25,20 @@ void explainVector(){
         vector<int>varibalename;//it creates an empty container {}
         verialbeName.push_back(1);//{1}
         varibalename.emplace_back(2);//{1,2}  // it is similar to the push_back but emplace_back is faster than push_back 
+
+        //you can also use vector as a pair
+        vector<pair<int,int>>vec;
+
+        v.push_back({1,2});
+        v.emplace_back(1,2); //in emiplice back we can pass the arguments directly
+
+        vector<int>v(5,100);//{100,100,100,100,100} //it creates a vector of size 5 and all the elements are 100
+
+        vector<int>v2(5);//{0,0,0,0,0} //it creates a vector of size 5 and all the elements are 0
+
+        vector<int>v1(5,20);
+        vector<int>v2(v1);//{20,20,20,20,20} //it creates a copy of v1
+
 }
 
 int main(){
