@@ -212,7 +212,49 @@ void explainSet(){
     set<int>set;
     set.insert(1); //{1}
     set.emplice(2);//{1,2}
-    set.emplice(2);//{1,2} //set should be unique thats why it 
+    set.emplice(2);//{1,2} //set should be unique thats why it will discart
+    set.insert(4);//{1,2,4}
+    set.insert(3);//{1,2,3,4} //it will store in sorted order
+
+    /*
+    functionality of insert in vector can be used also, that only increase efficiency
+
+    begin() end() rbegin() rend() clear() size() swap() empty() are same as those above
+    */
+        //{1,2,3,4,5}
+    auto it = set.find(3);//it will return the iterator of 3
+
+    auto it = st.find(6);//if the iterator will not found it will return the iterator of set.end()
+
+    st.erase(5); //it will erase the 5 from the set and maintain the sorted order
+
+//* count method takes logaraithmic time
+    int cnt = st.count(3);//if 3 is present in the set it will return 1 else 0
+
+//* delete functionality using iterator
+auto it1 = st.find(2);
+auto it2 = st.find(4);
+st.erase(it1,it2);//it will erase the elements between it1 and it2 after erase {1,4,5} [first,last]
+
+//* lower_bound it works in log(n) time
+
+//lower bound means which reaturns the first element if it occurs and if it is doesnot occurs the iterator is pointing to next immidiate greater element
+
+int a[] ={1,4,5,6,9,9}
+
+int ind = lower_bound(a, a+n, 4) -a; //here -a denotes the index of iterator it will return 1
+
+int ind = lower_bound(a, a+n, 7) -a; // return 4 beacuse 7 is not present in the array and it will return the immidiate greater element 
+
+int ind = lower_bound(a, a+n, 10) -a; // return 6 beacuse 10 is not present in the array and it will return the immidiate greater element
+
+//* upper_bound it works in log(n) time
+//
+int b[] = {1,4,5,6,9,9};
+
+int ind = upper_bound(b, b+n, 4) -b; //here -b denotes the index of iterator it will return 2 because it will returnt he next iterator of finding element
+
+//lower_bound() and upper_bound() are same as vector
 }
 
 
