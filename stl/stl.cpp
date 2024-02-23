@@ -258,6 +258,87 @@ int ind = upper_bound(b, b+n, 4) -b; //here -b denotes the index of iterator it 
 }
 
 
+
+void explainMultiSet(){
+    // it is same as set but it can store the duplicate elements but in sorted oreder
+
+    multiset<int>ms;
+    ms.insert(1);//{1}
+    ms.insert(1);//{1,1}
+    ms.insert(1);//{1,1,1}
+
+    ms.erase(1);//all 1's  will be erased
+
+    int cnt = ms.count(1);
+
+    //only a single one erased
+    ms.erase(ms.find(1)); //it will erase the first 1 from the multiset
+
+    MS.ERASE(ms.find(1),ms.find(1)+2);//it will erase the first two 1's from the multiset
+
+    //rest functions are same as set
+}
+
+
+//* everything is similar to the set but it not store in sorted oreder
+//*time complexicity of unordered_set is O(1) and set is O(log n)
+
+//in worst case once in a million o(n) linear time
+void exolainUSet(){
+        unordered_set<int>us;
+
+        //lower_bound and upper_bound are not present in the unordered_set
+        //it doesnot stores in any order
+        //it has a better time complexicity than set in most case, except some when collision occurs
+}
+
+void explainMap(){
+    //it is a key value pair 
+    map<int,int>mp;
+
+    mp<int ,pair<int,int>>mp;
+    mp<pair<int,int>,int>mp;
+
+//insertion 
+
+//*map store unique keys in sorted order
+mp[1] = 2;//{1:2}
+mp.emplace(2,3);//{1:2,2:3}
+mp.insert({3,4});//{1:2,2:3,3:4}
+
+
+mp[{2,3}] = 10;
+
+{
+    {1,2},
+    {2,3},
+    {3,4},
+    {4,3}
+}
+
+for(auto it : mp){
+    cout<<it.first<<" "<<it.second<<endl;
+}
+
+cout<<mp[1];
+cour<<mp[5];//if it didnot find any key it will return 0
+
+auto it = mp.find(2);//it will return the iterator of 2
+cout<<*(it).second;//prints 3
+
+auto it = mp.find(5);//it will return the iterator of mp.end()
+
+
+auto it = mp.lower_bound(2);//it will return the iterator of 2
+auto it = mp.upper_bound(2);//it will return the iterator of 3
+
+}
+
+void explainMultimap(){
+    //everything same as map, only it can store multiple keys
+    //only map[key] will not work in multimap
+}
+
 int main(){
 
 
