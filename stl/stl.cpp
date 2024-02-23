@@ -339,6 +339,51 @@ void explainMultimap(){
     //only map[key] will not work in multimap
 }
 
+void explainUnorderedMap(){
+    //it is same as map but it doesnot store in sorted order
+    //it has better time complexicity than map
+}
+
+//* important algorithms
+
+bool comp(pair<int,int> p1, pair<int,int>p2){
+    if(p1.second < p2.second) return true;
+    if(p1.second > p2.second) return false;
+    if(p1 == p2) return true;
+    return false;
+}
+
+void explainAlgo(){
+    sort (a,a+n);//it will sort the array in ascending order
+    sort(v.begin(), v.end());//it will sort the vector in ascending order
+
+    //sorting from a particular index
+    sort(a+startindindex,a+endindex);
+
+    //sorting in descending order
+    sort(a,a+n,greater<int>);
+
+    pair<int,int> a[] = {{1,2},{2,1 },{4,1}};
+    //sort it according to second element
+    //if second element is same, then sort
+    //if according to first element but in decending order
+    sort(a,a+n,comp);
+
+    int num = 7;
+    int cnt = __builtin_popcount(num);//it will return the number of set bits in the number
+
+    long long num = 1234567955;
+    int cnt = __builtin_popcountll(num);
+
+    string s = '123';
+    sort(s.begin(),s.end());//it will sort the string in ascending order
+    do{
+        count<<s<<endl;
+    }while(next_permutation(s.begin(),s.end())); //it will print all the permutation of the string
+
+int maxe = max_element(a,a+n) - a;//it will return the index of the maximum element in the array
+}
+
 int main(){
 
 
