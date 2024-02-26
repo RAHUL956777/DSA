@@ -387,6 +387,5 @@ int maxe = max_element(a,a+n) - a;//it will return the index of the maximum elem
 int main(){
 
 
-
     return 0;
 }
