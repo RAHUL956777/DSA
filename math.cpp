@@ -75,12 +75,29 @@ void printdivisorsanother(int n){
     for(auto it:ls) cout<<it<< " ";
 }
 
+void findprime(int n){
+    int count = 0;
+    for(int i=1;i*i<=n;i++){
+        if(n%i == 0){
+            count++;
+            if((n/i) !=i){
+                count++;
+            }
+        }
+    }
+    if(count == 2) {
+        cout<<n<<" "<<"Is a prime number";
+    }else{
+        cout<<n<<" "<<"Is not a prime number";
+    }
+}
+
 
 int main(){
     int n;
     cout<<"enter number : ";
     cin>>n;
-    printdivisorsanother(n);
+    findprime(n);
 
     return 0;
 }
