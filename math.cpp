@@ -92,12 +92,27 @@ void findprime(int n){
     }
 }
 
+ int printgcd(int a, int b){
+    while(a>0 && b>0){
+        if(a>b) a=a%b;
+        else b = b%a;
+    }
+    if(a==0) {
+        cout<<"Greatest Common divisor is: "<<b;
+        return b;
+    }
+    else{
+        cout<<"Greatest Common divisor is: "<<a;
+        return a;
+    
+    }
+}
 
 int main(){
-    int n;
-    cout<<"enter number : ";
-    cin>>n;
-    findprime(n);
+    int n1,n2;
+    cout<<"enter numbers : ";
+    cin>>n1>>n2;
+    printgcd(n1,n2);
 
     return 0;
 }
