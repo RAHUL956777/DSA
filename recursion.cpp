@@ -51,10 +51,20 @@ void pBackNumberBacktracking(int i, int n){  //(1,3 ), (2,3), (1,3)
     cout<<i<<endl;
 }
 
+//summation of the first n numbers -- 1 parameter  2 function
+void sumatiousingparameter(int i, int sum){
+    if(i<=0){
+        cout<<"Sum is: "<<sum<<endl;
+        return;
+    }
+    sumatiousingparameter(i-1,sum+i);
+}
+
+
 int main() {
     int num; 
-    cout<<"Enter how many times you want to see: ";
+    cout<<"Enter number: ";
         cin>>num;
-        pBackNumberBacktracking(1,num);
+        sumatiousingparameter(num,0); 
     return 0;
 }
