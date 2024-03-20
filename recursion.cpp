@@ -51,9 +51,9 @@ void pBackNumberBacktracking(int i, int n){  //(1,3 ), (2,3), (1,3)
     cout<<i<<endl;
 }
 
-//summation of the first n numbers -- 1 parameter  2 function
+//summation of the first n numbers -- 1 parameter  2 functional
 void sumatiousingparameter(int i, int sum){
-    if(i<=0){
+    if(i<=1){
         cout<<"Sum is: "<<sum<<endl;
         return;
     }
@@ -61,10 +61,17 @@ void sumatiousingparameter(int i, int sum){
 }
 
 
+void sumationusingfunction(int n){
+    if(n==0) return 0;
+    return n + sumationusingfunction(n-1);
+}
+
+
+
 int main() {
     int num; 
     cout<<"Enter number: ";
         cin>>num;
-        sumatiousingparameter(num,0); 
+        sumationusingfunction(num); 
     return 0;
 }
